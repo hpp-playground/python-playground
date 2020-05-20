@@ -2,13 +2,12 @@ import numpy as np
 
 n = 5
 
-a = np.empty(shape=(n, 0))
+a = np.empty(shape=(n, 1, 0))
 print(a.shape)
 
-test = np.array([1,1,1,1,1]).reshape([n, 1])
-print(test)
-print(test.shape)
+test = np.array([1] * n * 5).reshape((n, 1, 5))
 
-a = np.append(a, test, axis=1)
+a = np.append(a, test, axis=2)
+
 print(a)
 print(a.shape)
