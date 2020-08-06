@@ -1,11 +1,11 @@
 import time
+from functools import reduce
 from typing import Callable
 
 def make_bincountlist(x: int) -> None:
     res = [0]
     for _ in range(x.bit_length()):
         res += [j+1 for j in res]
-
 
 def popcount_while(x: int) -> int:
     ret = 0
@@ -33,9 +33,11 @@ def measure(f: Callable[[int], int], iteration: int = 10**5):
     print(f"{f.__name__}:\t", time.time() - start)
 
 if __name__ == "__main__":
-    start = time.time()
-    make_bincountlist(10**5)
-    print(f"{make_bincountlist.__name__}:\t", time.time() - start)
+    x = 7
+    print([None for res in [[0]] if not (res.extend([j+1 for j in res])) for _ in range(x.bit_length())])
+    # start = time.time()
+    # make_bincountlist(10**5)
+    # print(f"{make_bincountlist.__name__}:\t", time.time() - start)
 
-    for f in [popcount_while, popcount_str, bit_count]:
-        measure(f)
+    # for f in [popcount_while, popcount_str, bit_count]:
+    #     measure(f)
