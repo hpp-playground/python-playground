@@ -63,8 +63,8 @@ for caption_id in caption_ids:
     print(url)
     try:
         response = requests.post(url, params=params, headers=headers)
-        print(response)
+        print("response", response)
         result = response.json()
-        print(result)
-    except :
+        print("result", result)
+    except:
         print("Error")
