@@ -21,6 +21,14 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
 
 [[package]]
+name = "auto-syspath"
+version = "0.1.1"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
@@ -107,7 +115,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "4d1de49710d78bd295469a572576efe3d5b96e6e8760458e870affe880e8d10e"
+content-hash = "e0de5a6a6665e957c7e91bbbab7481d6aca30030ed64a8b89b8ef8394844a193"
 
 [metadata.files]
 atomicwrites = [
@@ -117,6 +125,10 @@ atomicwrites = [
 attrs = [
     {file = "attrs-21.2.0-py2.py3-none-any.whl", hash = "sha256:149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1"},
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
+]
+auto-syspath = [
+    {file = "auto-syspath-0.1.1.tar.gz", hash = "sha256:289b38968fe271200cf03b3616aaa2cccc6c8fd7dddb2b997c62d5d957f2ecbd"},
+    {file = "auto_syspath-0.1.1-py3-none-any.whl", hash = "sha256:fc6fe33888b20a755d422c2207f039b8298ef87f40b7c79597248a8e042955e0"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
