@@ -16,6 +16,7 @@ tqdm = "^4.61.0"
 ginza = "^4.0.6"
 networkx = "^2.6.1"
 pygraphviz = "^1.7"
+defsent = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
