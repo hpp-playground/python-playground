@@ -1,8 +1,7 @@
-class MyObj(BaseException):
+class MyObj(Exception):
     def __init__(self, *args: object) -> None:
         super().__init__(*args)
-        print(*args)
 
 obj = MyObj(1, 2, 3)
 
-raise obj
+raise obj from ValueError("this is an invalid value.")
