@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class Hoge:
     a: int
+
 
 @dataclass
 class Fuga(Hoge):

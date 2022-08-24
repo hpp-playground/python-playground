@@ -4,5 +4,6 @@ def main():
             print(line.strip())
             input()
 
+
 if __name__ == "__main__":
     main()

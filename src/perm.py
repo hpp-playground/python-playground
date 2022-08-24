@@ -1,6 +1,7 @@
 import sys
 from copy import deepcopy
 
+
 def _perm(head: list, rest: list, result: list):
     if len(rest) == 0:
         # restを消費仕切ったら、結果に渡してあげる
@@ -15,7 +16,8 @@ def _perm(head: list, rest: list, result: list):
         headx = deepcopy(head)
         headx.append(r)
 
-        _perm(headx,restx,result)
+        _perm(headx, restx, result)
+
 
 # サブっぽい関数に全部任せる
 def perm(source: list) -> list:
@@ -23,11 +25,13 @@ def perm(source: list) -> list:
     _perm([], source, res)
     return res
 
+
 def main():
     N = int(input())
 
-    res = perm(list(range(1,N+1)))
+    res = perm(list(range(1, N + 1)))
     print(res)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

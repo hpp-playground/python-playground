@@ -8,6 +8,7 @@ for ai in A:
             break
         print(ai, bi)
     else:
+
         continue
     break
 else:

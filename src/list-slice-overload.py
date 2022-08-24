@@ -9,6 +9,7 @@ class SliceList(list):
         else:
             return [super(SliceList, self).__getitem__(k) for k in key]
 
+
 a = SliceList([1, 2, 3])
 
 print(a[0])

@@ -12,7 +12,3 @@ def main():
     with open("fib.txt", "w") as f:
         for i in range(1, 100):
             f.write(str(i) + "\n")
-            
-    
-
-    

@@ -7,6 +7,7 @@ def hoge(i, d, s):
     d[i] = i
     s.add(i)
 
+
 def main():
     with Manager() as manager, Pool(processes=os.cpu_count()) as pool:
         d = manager.dict()
@@ -15,6 +16,7 @@ def main():
 
         print(d)
         print(s)
+
 
 if __name__ == "__main__":
     main()

@@ -18,12 +18,13 @@ def factorize(n):
 def main():
     N, M = map(int, input().strip().split())
     A = list(map(int, input().strip().split()))
-    primes = [True]*(M+1)
+    primes = [True] * (M + 1)
     primes[0] = False
     for a in A:
         factors = factorize(a)
         for fi in factors:
-            if fi > M: continue
+            if fi > M:
+                continue
             if primes[fi]:
                 tmp = fi
                 while tmp <= M:
@@ -33,6 +34,7 @@ def main():
     for prime, flag in enumerate(primes):
         if flag:
             print(prime)
+
 
 if __name__ == "__main__":
     main()

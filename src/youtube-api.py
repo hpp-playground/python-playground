@@ -1,11 +1,11 @@
 import os
 import requests
 
-API_KEY = os.environ['YOUTUBE_API_KEY']
-ACCESS_TOKEN = os.environ['YOUTUBE_ACCESS_TOKEN']
-CHANNEL_ID = 'UCD-miitqNY3nyukJ4Fnf4_A'
+API_KEY = os.environ["YOUTUBE_API_KEY"]
+ACCESS_TOKEN = os.environ["YOUTUBE_ACCESS_TOKEN"]
+CHANNEL_ID = "UCD-miitqNY3nyukJ4Fnf4_A"
 
-url = 'https://www.googleapis.com/youtube/v3/search'
+url = "https://www.googleapis.com/youtube/v3/search"
 infos = []
 
 print(API_KEY, CHANNEL_ID, url, infos)
@@ -52,7 +52,7 @@ for video_id in video_ids:
 print(caption_ids)
 
 caption_data = []
-headers = {'Authorization': 'Bearer ' + ACCESS_TOKEN}
+headers = {"Authorization": "Bearer " + ACCESS_TOKEN}
 
 for caption_id in caption_ids:
     url = "https://www.googleapis.com/youtube/v3/captions/" + caption_id

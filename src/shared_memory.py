@@ -9,12 +9,12 @@ def hoge(args):
     shared_set.add(i)
     lock.release()
 
+
 def main():
     lock = Lock()
     shared_set = Value(set, set())
     _ = process_map(hoge, zip(range(10), repeat(lock), repeat(shared_set)))
     print(shared_set)
-
 
 
 if __name__ == "__main__":

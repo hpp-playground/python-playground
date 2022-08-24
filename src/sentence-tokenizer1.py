@@ -1,11 +1,9 @@
-
 import re
 from typing import List
 
 
 class SentenceTokenizer:
-    """Simple Rule-based Sentence Splitter.
-    """
+    """Simple Rule-based Sentence Splitter."""
 
     PERIOD = "。"
     PERIOD_SPECIAL = "__PERIOD__"

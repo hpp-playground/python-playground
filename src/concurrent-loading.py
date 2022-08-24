@@ -4,10 +4,10 @@ import time
 
 
 def sample_func(index):
-    print('index: %s started.' % index)
+    print("index: %s started." % index)
     sleep_seconds = random.randint(2, 4)
     time.sleep(sleep_seconds)
-    print('index: %s ended.' % index)
+    print("index: %s ended." % index)
     return index
 
 
@@ -18,6 +18,6 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
         future_list.append(future)
     res_future = concurrent.futures.as_completed(fs=future_list)
 
-print('completed.')
+print("completed.")
 for r in res_future:
     print(r.result())

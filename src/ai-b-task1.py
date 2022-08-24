@@ -2,15 +2,18 @@ import math
 
 
 def l2norm(v):
-    return sum(vi*vi for vi in v)
+    return sum(vi * vi for vi in v)
+
 
 def dot_product(v1, v2):
     assert len(v1) == len(v2)
-    return sum(v1i*v2i for v1i, v2i in zip(v1, v2))
+    return sum(v1i * v2i for v1i, v2i in zip(v1, v2))
+
 
 def cossim(v1, v2):
     assert len(v1) == len(v2)
-    return dot_product(v1,v2) / math.sqrt(l2norm(v1) * l2norm(v2))
+    return dot_product(v1, v2) / math.sqrt(l2norm(v1) * l2norm(v2))
+
 
 def main():
     hierogriphs = [
@@ -27,7 +30,7 @@ def main():
     for hierogriph in hierogriphs:
         print(cossim(query, hierogriph))
 
-    print("-"*40)
+    print("-" * 40)
 
     word_counts = [sum(v) for v in hierogriphs]
     context_counts = [sum(c) for c in zip(*hierogriphs)]
@@ -36,7 +39,13 @@ def main():
     eps = 1e-9
     pmi_matrix = [
         [
-            max(0, math.log(vi+eps) + math.log(count_sum) - math.log(wc+eps) - math.log(cc+eps))
+            max(
+                0,
+                math.log(vi + eps)
+                + math.log(count_sum)
+                - math.log(wc + eps)
+                - math.log(cc + eps),
+            )
             for cc, vi in zip(context_counts, v)
         ]
         for wc, v in zip(word_counts, hierogriphs)

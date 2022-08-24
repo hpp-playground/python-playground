@@ -9,15 +9,15 @@ import fcntl, os
 #     f.write("\n".join(lines + [x]))
 #     f.flush()
 
-filename = 'test.txt'
-with open(filename, 'r+') as f:
+filename = "test.txt"
+with open(filename, "r+") as f:
     try:
         fcntl.flock(f, fcntl.LOCK_EX)
         data = f.readlines()
         f.truncate(0)
         f.seek(os.SEEK_SET)
-        data.append(input("prompt > ")+"\n")
+        data.append(input("prompt > ") + "\n")
         f.writelines(data)
         print(data)
     except IOError:
-        print('flock() failure')
+        print("flock() failure")

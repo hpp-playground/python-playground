@@ -2,6 +2,7 @@ from typing import List
 import sys
 from pathlib import Path
 
+
 class Hoge:
     @classmethod
     def get_class_paths_in_my_project(cls) -> List[Path]:
@@ -13,11 +14,11 @@ class Hoge:
             m = sys.modules[c.__module__]
             try:
                 path = Path(m.__file__)
-            except AttributeError: # this module is `builtins` module
+            except AttributeError:  # this module is `builtins` module
                 continue
             try:
                 path.relative_to(src_dir)
-            except ValueError: # not in src dir
+            except ValueError:  # not in src dir
                 continue
             ret.append(path)
         return ret
